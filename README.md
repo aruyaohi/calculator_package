@@ -25,9 +25,9 @@ Clone the repository:
 
 Open your terminal or command prompt and use the git clone command with the provided repository URL:
 
-### Bash
-
-`git clone https://github.com/aruyaohi/calculator_package.git`
+```Bash
+git clone https://github.com/aruyaohi/calculator_package.git
+```
 
 This command will download the entire calculator_package directory to your current location.
 
