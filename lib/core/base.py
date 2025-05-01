@@ -4,9 +4,7 @@ from typing import List
 from utils.input_parser import input_parser
 
 
-operators = {
-
-}
+local_operators = ['+','-','*','/']
 
 class Calculator:
     def __init__(self, expression: str):
@@ -17,13 +15,16 @@ class Calculator:
         operators = []
         expression = input_parser(self.expression)
         result = expression.parse()
-        print(result)
-        # numbers = (result['output'])
-        # operators = (result['operators'])
-
-        print(numbers,operators)
+        for item in result:
+            if item.isnumeric():
+                numbers.append(item)
+            elif item in local_operators:
+                operators.append(item)
+      
+        return numbers,operators
         
 
 expression_one = Calculator('3,+,5,*,8')
-expression_one.calculate()
+print(expression_one.calculate())
+
     

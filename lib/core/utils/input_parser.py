@@ -1,5 +1,5 @@
 from typing import List
-from split import Split
+from utils.split import Split
 precendence = {
     '+' : 1,
     '-' : 1,
@@ -38,6 +38,3 @@ class input_parser:
                 output.append(stack.pop())
         return output
 
-express = input_parser('3,+,5,+,6,*,8')
-parsed_express = express.parse()
-print(parsed_express)
